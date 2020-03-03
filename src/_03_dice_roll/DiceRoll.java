@@ -4,6 +4,7 @@
 package _03_dice_roll;
 
 import java.awt.Dimension;
+
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -11,6 +12,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import java.util.Random;
 
 public class DiceRoll {
 
@@ -48,7 +50,9 @@ public class DiceRoll {
 		rollButton.addActionListener((e) -> {
 
 			// 1. Make randomChoice equal to a random number between 1 and 6
-			int randomChoice = 0;
+			int randomChoice =1;
+Random ran= new Random();
+randomChoice=ran.nextInt(6);
 
 			// 2. Fix the code below so that it displays the correct image
 			if (randomChoice == 0) {
