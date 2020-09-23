@@ -1,22 +1,27 @@
  // 1. Create three integer variables to represent the x, y, and the size of the ellipse
-       
+       int x=300;
+       int y=300;
+       int z=100;
     void setup() {
       // 2. Set the size of your sketch
-    
+    size(600,600);
     }
     
     void draw() {
       // 3. Set the background color of your sketch
-      
+      background(#FFFFFF);
+      fill(#6D04D8);
       // 4. Draw an ellipse. Make sure it fits in the window.
-      // Use the variables created at the top of the sketch, 
+      ellipse(x,y,z,z);
+      // Use the variables created at the top of the sketch,
       // for the location and size of your ellipse
+      
     
     }
     
     void mousePressed() {
       //5. Create an integer variable called distance
-      
+      int distance=getDistance(mouseX, mouseY, x, y);
       //6. Set the value of the distance variable to the value returned by the getDistance method
       //   Pass the mouse's x and y (mouseX and mouseY) and the x and y of your ellipse to the method.
         
@@ -25,7 +30,10 @@
       //    If it is, set a new x and y for the ellipse, using a random location on the window
       //    Hint: Use the Processing random() function
        
-      
+      if(distance<Z) {
+        x = (int)random(width);
+        y=(int)random(height);
+      }
     }
     
     int getDistance(int x1, int y1, int x2, int y2) {
